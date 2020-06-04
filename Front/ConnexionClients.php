@@ -7,8 +7,8 @@
 <!-- Formulaire d'inscription des clients -->
 <div class="form-connexion-client">
     <h1>FORMULAIRE DE CONNEXION</h1>
-	<form class="form-connexion-contenu" METHOD="POST" action="">
-		<label>Identifiant :</label><br><input name="identifiant" type="text" class="input-identifiant" maxlength="25" size="25" placeholder="Entrez votre identifiant"><br>
+	<form class="form-connexion-contenu" METHOD="POST" action="connexion.php?action=connexion">
+		<label>Mail :</label><br><input name="mail" type="text" class="input-email" maxlength="25" size="25" placeholder="Entrez votre adresse mail"><br>
         <label>Mot de passe :</label><br><input name="mdp" type="password" class="input-password" maxlength="25" size="25" placeholder="Entrez votre mot de passe" required /><br>
 
 		<button class="connexion-button" type="submit" value="Connexion">Connexion</button>
