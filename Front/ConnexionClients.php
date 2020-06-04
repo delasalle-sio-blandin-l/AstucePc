@@ -1,7 +1,7 @@
 <?php
     //Inclusions de la barre de navigation (html_tete.html) et le fichier config (config.php)
-    require_once __DIR__.'/inclusions/config.php'; 
-	require_once DOSS_INC.'/html_tete.html';
+    //require_once __DIR__.'/inclusions/config.php'; 
+	require_once '../core/inclusions/html_tete2.html';
 ?>
 
 <!-- Formulaire d'inscription des clients -->
@@ -15,9 +15,9 @@
 	</form>
 </div>
 
-<p>Vous n'avez pas de compte ? <a class="" href="vueInscriptionClients.php">Cliquez-ici</a></p>
+<p>Vous n'avez pas de compte ? <a class="" href="InscriptionClients.php">Cliquez-ici</a></p>
 
 
 
 <!--pied de page-->
-<?php require_once DOSS_INC.'/html_pied.html'; ?>
+<?php require_once '../core/inclusions/html_pied2.html'; ?>
