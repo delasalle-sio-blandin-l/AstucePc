@@ -1,0 +1,589 @@
+/* FICHIER CSS DE L'ESPACE ADMINISTRATION */
+
+
+/* Police du site */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/* Toutes les couleurs du site */
+:root {
+  --main-white: #ffffff;
+
+  --main-light-blue: #c0ccdf;
+  --main-blue: #0098d4;
+  --main-black-blue: #0548BD; 
+  --main-black-blue2: #023285; 
+  --main-darkblue: #001e69;
+
+  --main-black: #1c1f20;
+}
+
+/* Dimmension du site par raport à l'écran */
+/* Ne pas modifier */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ne pas modifier */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Corps du site */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--main-white);
+}
+
+/* Paragraphe du site */
+p {
+  color : var(--main-black);
+  max-width: 900px;
+  text-align: center;
+  line-height: 2;
+  margin: auto;
+}
+
+/* Onglets de la barre de navigation */
+ul {
+    list-style: none;
+}
+  
+/* Lien du site */
+a {
+    text-decoration: none;
+    color: var(--main-light-blue);
+    font-size: 16px;
+}
+
+/* Titre du site */
+h1{
+    font-weight: 500;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-black-blue);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+/* Titre un peu moins gros */
+h2 {
+    font-weight: 500;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-black-blue);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Sous titre */
+h4 {
+    font-weight: 500;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-black-blue);
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+/* MENU DEROULANT */
+
+/* Lien principal du menu */
+.dropbtn {
+  color: var(--main-light-blue);
+  font-size: 1.8rem;
+  border: none;
+}
+
+/* bouton au survol */
+.dropbtn:hover {
+  color: var(--main-white);
+}
+
+/* <div> du contenu - Ne pas modifier */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Contenu du menu déroulant */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--main-white);
+  min-width: 300px;
+  z-index: 1;
+}
+
+/* Lien du menu déroulant */
+.dropdown-content a {
+  color: var(--main-black);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Changement de la couleur au survol des liens du menu déroulant */
+.dropdown-content a:hover {background-color: var(--main-black-blue);}
+
+/* Montre le menu au survol */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* NAVBAR */
+
+/* Class navbar regroupant les éléments de la barre de navigation */
+.navbar {
+  padding: 20px;
+  width: 100%;
+  background: var(--main-black-blue);
+}
+
+/* Class navbar  */
+.navbar p {
+  color: var(--main-white);
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Class regroupant les onglets */
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 30px;
+}
+  
+/* Class regroupant les liens des onglets */
+.nav-list a {
+  margin-right: 30px;
+  font-size: 1.8rem;
+}
+  
+/* Lien des onglets au survol */
+.nav-list a:hover {
+    color: var(--main-white);
+} 
+
+/* FORMULAIRE DE CONNEXION */
+
+/* Formulaire de connexion */
+.admin-form-connexion {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-contact-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Titre des champs a remplir */
+label {
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+/* Champs du formulaire */
+.input-identifiant, 
+.input-mdp {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+/* Type des champs */
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+
+/* BOUTON ENVOYER */
+
+/* Bouton de connexion à l'espace admin */
+.admin-button-connexion {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0.75rem;
+    background: var(--main-darkblue);
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ADMIN ACCUEIL */
+
+/* Texte de la page d'accueil de l'espace admin */
+.admin-accueil-texte {
+  color : var(--main-black);
+  max-width: 900px;
+  text-align: center;
+  line-height: 2;
+  margin: auto;
+}
+
+/* ADMIN INDEX */ 
+
+/*Design de toute la page index  */
+.admin-index {
+    margin: auto;
+}
+
+/* Contenu de la page index */
+.admin-index-contenu {
+    margin: auto;
+}
+
+/* MODIFICATION ACTUALITE */ 
+
+/* Contenu du formulaire avec le titre */
+.form-modification-actualite {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-modification-actualite-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Bouton de modification d'actualité */
+.modification-actualite-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+.retour-actualites {
+  text-align: center;
+}
+
+
+/* AJOUT PRODUIT */
+
+/* Contenu du formulaire avec le titre */
+.form-ajout-produit {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-ajout-produit-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Bouton d'ajout de produit */
+.ajout-produit-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Champs de saisies */
+.input-libelle, 
+.input-description,
+.input-prix, 
+.input-image, 
+.input-familleProduit, 
+.input-categorie, 
+.input-sousCategorie {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.retour-produit {
+  text-align: center;
+}
+
+/* MODIFICATION PRODUIT */ 
+
+
+/* Contenu du formulaire avec le titre */
+.form-modification-produit {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-modification-produit-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Bouton d'ajout de produit */
+.modification-produit-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* AJOUT CATEGORIE */
+
+/* Contenu du formulaire avec le titre */
+.form-ajout-categorie {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-ajout-categorie-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Bouton d'ajout d'une categorie */
+.ajout-categorie-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Champs de saisies */
+.input-libelle {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.retour-categorie {
+  text-align: center;
+}
+
+/* MODIFICATION CATEGORIE */ 
+
+
+/* Contenu du formulaire avec le titre */
+.form-modification-categorie {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-modification-categorie-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Bouton de modification des catégorie */
+.modification-categorie-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* MODIFICATION IMAGES ET TEXTES */
+
+/* Formulaire d'importation de texte et d'image */
+.form-importation-image, 
+.form-importation-texte {
+  width: 50%;
+  margin: 3rem 25rem 0 auto;
+}
+
+.form-importation-image input, 
+.form-importation-texte input {
+  color: var(--main-black);
+}
+
+.admin-importation-texte, 
+.admin-importation-image {
+  font-weight: bold;
+}
+
+
+/* IMPORTATION PRODUITS ET CONTACT */
+
+/* Formulaire d'importation des données vers la base SQL */
+.form-importation-produit, 
+.form-importation-contact {
+  width: 50%;
+  margin: 3rem 25rem 0 auto;
+}
+
+.form-importation-produit input, 
+.form-importation-contact input {
+  color: var(--main-black);
+}
+
+.admin-importation-produit, 
+.admin-importation-contact {
+  font-weight: bold;
+}
+
+
+
+
+/* SUPPRESSION PRODUIT */
+
+.texte-pieces-détachees {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+table {
+  color: var(--main-black);
+  width: 100%;
+  margin-left: 20px;
+}
+
+thead {
+  font-weight: bold;
+}
+
+.lien-ajout-produit {
+  display:block;
+  width:150px;
+  margin:0 auto;
+}
+
+/* MODIFICATION MOT DE PASSE */ 
+
+/* Formulaire de connexion */
+.admin-form-modifMDP {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-modifMDP-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+.input-modif-mdp {
+  width: 80%;
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+.img-view-password {
+  width: 4%;
+  height: 4%;
+  margin-left: 15px;
+}
+
+.afficher-mdp {
+  display: flex;
+  align-items: center;
+}
+
+
+/* ADMIN FOOTER */
+
+
+/* Class footer (Pied de page) */ 
+footer {
+    margin-top: 30px;
+    padding: 20px;
+}
+  
+/* Texte du footer */
+footer p {
+    margin-top: 5px;
+    font-size: inherit;
+    margin: auto;
+}
+
+/* Lien du footer */
+footer a {
+    color: var(--main-black-blue);
+}
+
+/* Lien au survol dans le footer */
+footer a:hover{
+    color: var(--main-light-blue);
+}

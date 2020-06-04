@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<html lang="fr">
+		<head>
+			<!-- Balise méta -->
+			<meta charset="utf-8">
+			<meta name="title" content="Astuce PC">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!-- Titre de l'espace administration -->
+			<title>Espace administation astuce PC</title>
+			<!-- Fichier css (design du site) -->
+			<link rel="stylesheet"  type="text/css" href="ressources/css/index.css" media="screen">
+		</head>
+		<body>
+		<!-- Barre de navigation -->
+		<nav class="navbar">
+			<ul class="nav-list">
+				<li><a href="accueil.php">Accueil</a></li>
+				<!-- Menu déroulant -->
+				<div class="dropdown">
+					<li class="dropbtn">Modification</li>
+					<div class="dropdown-content">
+						<a href="affichageModification.php">Images</a>
+						<a href="affichageProduit.php">Produits</a>
+						<a href="affichageActualite.php">Actualités</a>
+						<a href="affichageCategorie.php">Catégorie</a>
+					</div>
+				</div>
+				<li><a href="importationCSV.php">Importation de données</a></li>
+				<li><a href="affichageAjoutImageProduit.php">Ajout image produit</a></li>
+				<li><a href="affichageModifPassword.php">Modifier votre mot de passe</a></li>
+				<li><a href="login.php?action=deconnexion">Déconnexion</a></li>
+			</ul>
+		</nav>

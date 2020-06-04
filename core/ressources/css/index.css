@@ -1,0 +1,1164 @@
+/* FICHIER CSS DU SITE */
+
+
+/* Police du site */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/* Toutes les couleurs du site */
+:root {
+  --main-white: #ffffff;
+
+  --main-light-blue: #c0ccdf;
+  --main-blue: #0098d4;
+  --main-black-blue: #0548BD; 
+  --main-black-blue2: #023285; 
+  --main-darkblue: #001e69;
+
+  --main-grey : #ebebeb;
+
+  --main-black: #1c1f20;
+}
+
+/* Dimmension du site par raport à l'écran */
+/* Ne pas modifier */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ne pas modifier */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* corps du site */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--main-white);
+  margin: 0; 
+  padding: 0;
+}
+
+/* texte du site */
+p {
+  color : var(--main-black);
+  max-width: 900px;
+  text-align: center;
+  line-height: 2;
+  margin: auto;
+}
+
+/* titre des pages */
+h1{
+  font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--main-black-blue);
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* Lien au survol */
+a:hover {
+  color: var(--main-black);
+}
+
+/* MENU DEROULANT */
+ 
+/* Lien principal du menu */
+.dropbtn {
+  color: var(--main-light-blue);
+  font-size: 1.6rem;
+  border: none;
+}
+
+/* Contenu du menu déroulant */
+.dropdown-content {
+  /*display: none;*/
+  position: absolute;
+  left: -9999em; /* cache le sous menu dans la zone non visible du navigateur, compètement à gauche */
+  background-color: var(--main-white);
+  min-width: 300px;
+  z-index: 1;
+}
+
+/* Lien du menu déroulant */
+.dropdown-content a {
+  color: var(--main-black);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Changement de la couleur au survol des liens du menu déroulant */
+.dropdown-content a:hover {background-color: var(--main-black-blue);}
+
+/* Montre le menu au survol */
+.dropbtn:hover .dropdown-content {
+  left: auto;
+}
+
+
+/* Onglets de la barre de navigation */
+ul {
+  list-style: none;
+  align-items: center;
+}
+
+/* lien de la barre de navigation */
+a {
+  text-decoration: none;
+  color: var(--main-light-blue);
+}
+
+/* Id de la navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--main-black-blue);
+}
+
+#navbar input[type=checkbox] {
+  display: none;
+}
+
+#navbar label {
+  display: none;
+}
+
+.navbar-contact p {
+  font-size: 1.6rem;
+  color: var(--main-light-blue);
+}
+
+.navbar-contact-email a:hover {
+  color: var(--main-white);
+}
+
+/* Class regroupant les onglets */
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 30px;
+}
+
+/* Class regroupant les liens des onglets */
+.nav-list a {
+  font-size: 1.6rem;
+}
+
+/* Lien des onglets au survol */
+.nav-list a:hover {
+  color: var(--main-white);
+}
+
+/* ACCUEIL */
+
+/* Actualites du site */
+.actualites {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenu du site */
+.contenu {
+  text-align: center;
+  line-height: 4;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+/* Lien contenu dans la class contenu */
+.contenu a {
+  color: var(--main-black-blue);
+}
+
+/* Survol des liens */
+.contenu a:hover {
+  color: var(--main-black);
+}
+
+/* Class regroupant les icon et le texte sur la page d'accueil  */
+.intervention {
+  display:inline-block;
+  margin:0 50px;
+}
+
+/* AVIS GOOGLE BTN */
+
+.btn-google {
+  display: block;
+  margin-left: 50%;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 20px;
+  background: var(--main-black-blue);
+  color: var(--main-light-blue);
+  cursor: pointer;
+}
+
+.btn-google :hover {
+  color: var(--main-white);
+}
+
+.lien-avis-google {
+  color:  var(--main-light-blue);
+}
+
+.lien-avis-google :hover {
+  color: var(--main-black);
+}
+
+
+
+
+/* SLIDER CSS */
+/* lien du slider : https://www.w3schools.com/howto/howto_js_slideshow.asp */
+
+
+/* Slider contenu */
+.slider-contenu {
+  max-width: 1300px;
+  max-height: 900px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Boutons next & previous */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: var(--main-light-blue);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position du "next button" à droite */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Au survole, ajout d'un background noir */
+.prev:hover, .next:hover {
+  background-color: var(--main-white);
+}
+
+/* Texte des images */
+.text {
+  color: var(--main-white);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Cercles sous le slider */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--main-darkblue);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--main-light-blue);
+}
+
+
+/* CONTACT CSS */
+
+
+/* Contenu des infos complÃ©mentaires (Maps, Horaires) */
+.infos-contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+
+/* Horaires */
+.horaires {
+  line-height: 3;
+}
+
+/* Contenu du formulaire */
+.form-contact {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Texte formulaire */
+label {
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+/* Champs de saisie */
+.input-nom, 
+.input-prenom, 
+.input-email, 
+.input-sujet, 
+.input-telephone {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Champs de saisie du message */
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+/* Formulaire de contact */
+.form-contact-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Bouton envoyer de la page contact */
+.contact-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Texte de la page contact */
+.p-contact {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--main-white);
+}
+
+.link-p-contact {
+  color: var(--main-light-blue);
+}
+
+.link-p-contact:hover {
+  color: var(--main-white);
+}
+
+
+/* SOCIETE CSS */
+
+/* Image en haut de la page société */
+.img-societe {
+  margin: auto;
+  width: 100%;
+}
+
+/* Texte de la page société */
+.texte-societe {
+  color: var(--main-black);
+  margin: auto;
+  margin-bottom: 15px;
+  text-align: center;
+} 
+
+.lien-societe {
+  color: var(--main-black-blue);
+}
+
+
+/* Lien rédirigeant vers différents lien du site */
+.presta {
+  margin: auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.presta-link {
+  color: var(--main-black-blue);
+}
+
+
+/* ASSEMBLAGE CSS */
+
+/* image assemblage */
+.img-assemblage {
+  margin: auto;
+  width: 100%;
+}
+
+.texte-assemblage {
+  color: var(--main-black);
+  margin: auto;
+  text-align: center;
+}
+
+
+/* INSTALLATION PC */
+
+/* Texte de la page installation */
+.texte-installation {
+  margin: auto;
+  text-align: center;
+}
+
+/* DEPANNAGE */
+
+/* image dépannage */
+.img-depannage {
+  margin: auto;
+  width: 100%;
+}
+
+/* Texte de la page depannage */
+.texte-depannage {
+  color: var(--main-black);
+  margin: auto;
+  text-align: center;
+}
+
+
+/* BESOIN D'AIDE */
+
+/* image besoin d'aide */
+.img-aide {
+  margin: auto;
+  width: 100%;
+}
+
+.section-lien {
+  display:inline-block;
+  margin:0 50px;
+}
+
+/* Contenu de la page aide */ 
+.contenu-aide {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Section regroupant le texte et le bouton pour poser une question */ 
+.question {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Bouton permettant la redirection vers la page contact en cas de question */
+.btn-question {
+  display: block;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 20px;
+  background: var(--main-black-blue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Lien du bouton au survol */
+.btn-question-lien:hover {
+  color: var(--main-white);
+}
+
+
+/* FAQ */ 
+
+
+/* Block pour une question de la FAQ */
+.faq-block {
+  padding-bottom: 25px;
+}
+
+/* Section regroupant toutes les questions */
+#faq {
+  width: 350px;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10vh ;
+}
+
+/* Titre de la FAQ */
+.faq-titre {
+  padding: 5px 20px;
+  position: relative;
+  z-index: 20;
+  display: block;
+  height: 40px;
+  cursor: pointer;
+  color: var(--main-white);
+  border-radius: 3px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: var(--main-black-blue);
+}
+
+/* Titre de la FAQ au survol */
+.faq-titre:hover {
+  background-color: var(--main-blue);
+}
+
+input:checked + label, 
+input:checked + label:hover {
+ background-color: var(--main-blue);
+ color: var(--main-white);
+ border-bottom-left-radius: 0px;
+ border-bottom-right-radius: 0px;
+}
+
+/* Case a cocher cachéé */
+.ac-1, .ac-2, .ac-3, .ac-4, .ac-5, .ac-6 {
+  display: none;
+}
+
+/* Corps de la FAQ */
+article {
+  background-color: var(--main-black-blue);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-top: -2px;
+  overflow: hidden;
+  height: 0;
+  position: relative;
+  z-index: 10;
+  transition: height 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Texte de la FAQ */
+.faq-text p {
+  color: var(--main-white); 
+  line-height: 23px;
+  font-size: 16px;
+  padding: 20px;
+  max-width: 200;
+}
+
+/* Si on clique sur le titre le contenu apparait via une transition */
+input:checked ~ article {
+  transition: height 0.3s ease; 
+}
+
+input:checked ~ article.faq-text {
+  height: 270px; 
+}
+
+/* ASSISTANCE */
+
+/* Formulaire de saisies du code */
+.assistance-contenu {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Fieldset entourant le formulaire */
+.assistance-fieldset {
+  width: 100%;
+  padding: 8px 8px 8px 8px;
+}
+
+/* Titre et champs permettant de saisir le code */
+.assistance-texte-code, .assistance-titre {
+  color: var(--main-black);
+}
+
+/* Contenu a l'interieur du formulaire */
+.assistance-texte-contenu {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* Bouton permettant de se connecter a l'assistance */
+.assistance-button {
+  display: block;
+  width: 50%;
+  border: none;
+  margin: 2.8rem auto 0 auto;
+  padding: 0.75rem;
+  background: var(--main-black-blue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Texte de la page assistance */
+.assistance-texte {
+  max-width: 500;
+  text-align: center;
+  margin: 20px 0 70px 0;
+}
+
+/* Message d'erreur en cas de saisie d'un mauvais code */
+.texte-error-assistance {
+  color: var(--main-black);
+}
+
+/* FILTRE PRODUIT */
+
+.form-filtre-produit {
+  margin-left: 80px;
+}
+
+.btn-raz-produit {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: var(--main-black-blue);
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-filtre-produit {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: var(--main-black-blue);
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-filtre-produit:hover {
+  color: var(--main-white);
+}
+
+.form-filtre-produit select {
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+
+/* PRODUITS */
+
+
+/* Texte de la page pièces détachées */
+.texte-pieces-détachees {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+/* Tableau affichant les pièces détachées */
+table {
+  color: var(--main-black);
+  width: 100%;
+  margin-left: 20px;
+}
+
+/* Liste des ... de la page pièces détachées */
+thead {
+  font-weight: bold;
+}
+
+/* Cards des produits */
+
+/* la card */
+.wrapper {
+  height: 420px;
+  width: 654px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  height: 420px;
+  width: 327px;
+}
+
+.product-img img {
+  border-radius: 7px 0 0 7px;
+}
+
+.product-info {
+  float: left;
+  height: 420px;
+  width: 327px;
+  border-radius: 0 7px 10px 7px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  padding-top: 30px;
+  font-size: 24px;
+  color: var(--main-black-blue);
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: inherit;
+}
+
+.product-text h2 {
+  margin: 0 0 35px 0;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--main-blue);
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: var(--main-blue);
+  font-size: 16px;
+  font-family: inherit;
+  word-wrap: break-word;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  position: absolute;
+}
+
+.product-price-btn span {
+  color: var(--main-black-blue);
+}
+
+.product-price-btn p {
+  position: relative;
+  top: -30px;
+  height: 30px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: lighter;
+  color: var(--main-black-blue);
+  text-align: center;
+}
+
+.product-price-btn button {
+  float: right;
+  display: inline-block;
+  height: 50px;
+  width: 176px;
+  margin: 0 75px 0 0;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: var(--main-blue);
+  cursor: pointer;
+  outline: none;
+}
+
+.product-price-btn button:hover {
+  background-color: var(--main-black-blue2);
+}
+
+
+/* INSCRIPTION CLIENT */
+
+/* Formulaire d'inscription des clients */
+.form-inscription-client {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-inscription-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Champs de saisie */
+.input-ville, 
+.input-rue, 
+.input-cp {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+/* Bouton envoyer de la page contact */
+.inscription-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+
+/* CONNEXION CLIENT */
+
+/* Formulaire de connexion des clients */
+.form-connexion-client {
+    width: 50%;
+    margin: 3.125rem auto 0 auto;
+}
+
+/* Contenu du formulaire */
+.form-connexion-contenu {
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/* Champs de saisie */
+.input-identifiant, 
+.input-password {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+/* Bouton envoyer de la page contact */
+.connexion-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: inherit;
+  cursor: pointer;
+}
+
+/* MENTIONS LEGALES */
+
+.contenu-mentions-legales {
+  width: 80%;
+  margin: 3.125rem auto 0 auto;
+  background-color: var(--main-grey);
+}
+
+.sous-titre {
+  text-align: left;
+  color: var(--main-black);
+  font-size: 1.7rem;
+  margin-left: 90px;
+}
+
+.article {
+  font-style: italic;
+  text-align: left;
+}
+
+.contenu-mentions-legales p {
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.contenu-mentions-legales ul li {
+  text-align: left;
+  font-size: 1.4rem;
+  color: var(--main-black);
+  margin-left: 130px;
+}
+
+.contenu-mentions-legales a {
+  font-size: 1.4rem;
+  color: var(--main-blue);
+}
+
+.contenu-mentions-legales a:hover {
+  font-size: 1.4rem;
+  color: var(--main-black-blue2);
+}
+
+
+
+/* POLITIQUES CONFIDENTIALITES */ 
+
+.contenu-politiques-confidentialites {
+  width: 80%;
+  margin: 3.125rem auto 0 auto;
+  background-color: var(--main-grey);
+}
+
+.contenu-politiques-confidentialites p {
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.contenu-politiques-confidentialites ul li {
+  text-align: left;
+  font-size: 1.4rem;
+  color: var(--main-black);
+  margin-left: 130px;
+}
+
+.contenu-politiques-confidentialites ol {
+  text-align: left;
+  font-size: 1.4rem;
+  color: var(--main-black);
+  margin-left: 60px;
+}
+
+
+
+
+/* FOOTER (PIED DE PAGE) */
+
+
+/* Class footer (Pied de page) */ 
+footer {
+  margin-top: 20px;
+  background-color: var(--main-black-blue);
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Texte du footer */
+footer span {
+  margin-top: 5px;
+  font-size: 1.6rem;
+  color: var(--main-light-blue);
+}
+
+/* Lien du footer */
+footer a {
+  color: var(--main-light-blue);
+}
+
+/* Lien au survol dans le footer */
+footer a:hover{
+  color: var(--main-white);
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 910px) {
+ 
+  body {
+      font-size: 1.5rem;
+      font-weight: 200;
+  }
+
+  p {
+      line-height: 2;
+      text-align: center;
+      width: 90%;
+  }
+
+  h1{
+      font-weight: 400;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      line-height: 1;
+  }
+
+  .navbar-contact {
+    display: none;
+  }
+  
+  #navbar {
+      display: block;
+      overflow: hidden;
+  }
+  #navbar img {
+      max-width: 60%;
+  }
+
+  #navbar ul {
+      display: none;
+      text-align: center;
+  }
+
+  #navbar ul li {
+      display: block;
+      margin-right: 0px;
+  }
+
+  #navbar ul .dropdown-content {
+      display: block;
+  }
+
+  #navbar li:hover .dropdown-content {
+      display: block;
+      position: static;
+  }
+
+  #navbar label {
+      display: block;
+      float: right;
+      text-align: right;
+      color: var(--main-white);
+  }
+
+  #navbar input[type=checkbox]:checked ~  ul {
+      display: block;
+  }
+
+  .actualites {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .question {
+    display: block;
+  }
+
+  .btn-question {
+    margin: auto;
+  }
+
+  .img-societe {
+    height: 120px;
+  }
+
+  .img-assemblage {
+    height: 120px;
+  }
+
+  .img-depannage {
+    height: 120px;
+  }
+
+  .img-aide {
+    height: 120px;
+  }
+
+  .contenu-aide {
+    display: block;
+  }
+
+  .section-aide {
+    display: block;
+  }
+
+  .form-contact-contenu {
+    width: 100%;
+  }
+
+  .form-contact {
+    width: 80%;
+  }
+
+  .infos-contact {
+    width: 100%;
+    display: block;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .assistance-contenu {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+  }
+
+  .assistance-form-contenu {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .btn-google {
+    margin: auto;
+  }
+
+  .lien-avis-google {
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 5px;
+  }
+}
+
+
