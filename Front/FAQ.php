@@ -14,11 +14,11 @@
     <div class="faq-block">
         <div class="liste-question">
             <input class="ac-1" id="ac-1" type="checkbox">
-            <label class="faq-titre" for="ac-1">Puis-je réparer une charnière / écran</label>
+            <label class="faq-titre" for="ac-1">Lorem ipsum dolor, sit amet</label>
             <article class="faq-text">
-                <p>Charnière cassée ou écran fissuré vous pouvez tout à fait les réparer. 
-                   Comment faire ? Vous ne pouvez rien faire vous même, vous devez faire appel
-                   à un professionnel.
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur est, laudantium 
+                dolorum, nobis omnis id eveniet officiis dolor, sequi itaque quaerat? Reprehenderit 
+                voluptates esse nemo minus hic, consectetur dolores fugit!
                 </p>
             </article>
         </div>
@@ -27,11 +27,11 @@
     <div class="faq-block">
         <div class="liste-question">
             <input class="ac-2" id="ac-2" type="checkbox">
-            <label class="faq-titre" for="ac-2">PC sous Windows 7 un risque ?</label>
+            <label class="faq-titre" for="ac-2">Lorem ipsum dolor, sit amet</label>
             <article class="faq-text">
-                <p>Si vous possédez un ordinateur sous Windows 7, celà ne represente peu risque
-                   du moins pour le moment. Vous pouvez fonctionner sur Windows 7 encore quelques mois voir 1 an ou 2. 
-                   Eviter les sites sensibles dangereux eventuellement passer nous voir pour une analyse de votre materiel.
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur est, laudantium 
+                dolorum, nobis omnis id eveniet officiis dolor, sequi itaque quaerat? Reprehenderit 
+                voluptates esse nemo minus hic, consectetur dolores fugit!
                 </p>
             </article>
         </div>
@@ -40,12 +40,11 @@
     <div class="faq-block">
         <div class="liste-question">
             <input class="ac-3" id="ac-3" type="checkbox">
-            <label class="faq-titre" for="ac-3">Comment ajouter une imprimante à mon PC ?</label>
+            <label class="faq-titre" for="ac-3">Lorem ipsum dolor, sit amet</label>
             <article class="faq-text">
-                <p>Si votre imprimante n’est pas détectée automatiquement, cliquez sur Démarrer
-                   tapez imprimante, puis cliquez sur Périphériques et imprimantes. Cette 
-                   action fait apparaître la fenêtre Périphériques et imprimantes. Cliquez sur 
-                   Ajouter une imprimante.
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur est, laudantium 
+                dolorum, nobis omnis id eveniet officiis dolor, sequi itaque quaerat? Reprehenderit 
+                voluptates esse nemo minus hic, consectetur dolores fugit!
                 </p>
             </article>
         </div>
@@ -54,7 +53,7 @@
     <div class="faq-block">
         <div class="liste-question">
             <input class="ac-4" id="ac-4" type="checkbox">
-            <label class="faq-titre" for="ac-4"> Comment r</label>
+            <label class="faq-titre" for="ac-4">Lorem ipsum dolor, sit amet</label>
             <article class="faq-text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur est, laudantium 
                 dolorum, nobis omnis id eveniet officiis dolor, sequi itaque quaerat? Reprehenderit 
@@ -66,7 +65,7 @@
     <div class="faq-block">
         <div class="liste-question">
             <input class="ac-5" id="ac-5" type="checkbox">
-            <label class="faq-titre" for="ac-5"> Lorem ipsum dolor, sit amet</label>
+            <label class="faq-titre" for="ac-5">Lorem ipsum dolor, sit amet</label>
             <article class="faq-text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur est, laudantium 
                 dolorum, nobis omnis id eveniet officiis dolor, sequi itaque quaerat? Reprehenderit 

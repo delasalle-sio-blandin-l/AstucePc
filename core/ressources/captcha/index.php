@@ -25,10 +25,6 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
-    <form method="POST">
       <div class="g-recaptcha" data-sitekey="6LeVB-oUAAAAAM1zomM4w8Uhgj5DICI0HxhyH66b"></div>
-      <br/>
-      <input type="submit" value="Valider" name="submitForm">
-    </form>
   </body>
 </html>

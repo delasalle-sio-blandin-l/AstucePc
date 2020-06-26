@@ -5,8 +5,8 @@ if (isset ($_GET['action']))
 	// Si on se connecte
 	if ( $_GET['action'] == 'connexion' ) 
 	{
-		$mail = $_POST['mail']; 
-		$mdp = $_POST['mdp'];
+		$mail = htmlspecialchars($_POST['mail']); 
+		$mdp = htmlspecialchars($_POST['mdp']);
 
 		// Démarrage de la session et sauvegarde des informations dans 2 variables
 		session_start();

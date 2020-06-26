@@ -77,11 +77,10 @@
     </div> <!-- Fin du contenu -->
 
     <!-- Avis Google -->
-    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-2a2fad4b-a7cd-44f3-92e1-a557895fbda4"></div> -->
-
-    <!-- Avis Google -->
     <button  class="btn-google"><a class="lien-avis-google" href="https://www.google.com/search?q=astucepc+rennes&rlz=1C1GCEA_enFR884FR884&oq=astucepc+rennes&aqs=chrome..69i57j69i60l5.13720j0j7&sourceid=chrome&ie=UTF-8#lrd=0x480ede2bde801f29:0x806ac17949d08c0e,1,,,">AVIS GOOGLE</a></button>
 
+    <!-- Script Javascript pour le slider -->
+    <script type="text/javascript" src="core/ressources/js/slider.js"></script>
+    
 <!-- Pied de page -->
 <?php require_once 'core/inclusions/html_pied.html'; ?> 

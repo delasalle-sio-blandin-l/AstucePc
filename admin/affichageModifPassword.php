@@ -12,7 +12,7 @@
 				<form class="form-modifMDP-contenu" METHOD="POST" action="ModifMDP.php">
 					<label>Nouveau mot de passe :</label><br>
 					<div class="afficher-mdp">
-						<input name="newMDP" id="newMDP" type="password" class="input-modif-mdp" maxlength="8" size="8" placeholder="Entrez votre nouveau mot de passe" required />
+						<input name="newMDP" id="newMDP" type="password" class="input-modif-mdp" placeholder="Entrez votre nouveau mot de passe" pattern=".{12,}"   required title="12 caracteres minimum" required />
 						<img class="img-view-password" id="monBouton" src="../core/ressources/images/view.png" alt="icon-affiche-mdp">
 					</div><br>
 					
@@ -24,7 +24,5 @@
 		<!-- Pied de page -->
 		<?php require_once 'inclusions/html_pied.html'; ?>
 	</div>
-
-	<script src="ressources/js/viewPassword.js"></script>
 </body>
 </html>

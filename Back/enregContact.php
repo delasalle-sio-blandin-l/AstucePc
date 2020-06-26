@@ -8,12 +8,13 @@
     
 
         // Récupération des données saisies dans le formulaire de contact grâce à la méthode POST
-	    $prenom = $_POST['prenom'];
-	    $nom = $_POST['nom'];
-	    $email = $_POST['email'];
-	    $sujet = $_POST['sujet'];
-	    $message = $_POST['message'];
-	    $telephone = $_POST['telephone'];
+	    $prenom = htmlspecialchars($_POST['prenom']);
+	    $nom = htmlspecialchars($_POST['nom']);
+	    $email = htmlspecialchars($_POST['email']);
+	    $sujet = htmlspecialchars($_POST['sujet']);
+	    $message = htmlspecialchars($_POST['message']);
+        $telephone = htmlspecialchars($_POST['telephone']);
+
 
 	    // FONCTION ENVOIE DE MAIL
 
@@ -23,26 +24,30 @@
             header ("Refresh: 5;URL=../index.php");
             // adresse du destinataire (Votre adresse) !!
             $adresseDestinataire = $email;
+            // $headers = 'From: ' . $email . "\r\n" .
+            // 'Reply-To: astucepc@alwaysdata.net' . "\r\n" .
+            // 'X-Mailer: PHP/' . phpversion();
 
             // Fonction mais permettant d'envoyer un mail avec différents paramètres
-            mail($adresseDestinataire, $sujet, $message);
-            //Le mail a bien été envoyé
-            echo 'Votre message a bien été reçu';
-	    }
-	    else
-	    {
-            // Mail non envoyé et redirection vers la page contact
-            header ("Refresh: 5;URL=../Front/Contact.php");
-            echo 'Erreur, message non envoyé.';
+            if(mail($adresseDestinataire, $sujet, $message))
+            {
+                // mail bien envoyé
+                header ("Refresh: 5;URL=../index.php");
+                echo "Votre mail a bien été envoyé, nous allons vous répondre dans les meilleurs délais";
+            } else {
+                // Mail non envoyé et redirection vers la page contact
+                header ("Refresh: 5;URL=../Front/Contact.php");
+                echo "Votre mail n'a pas pu être envoyé";
+            }     
 	    }
 
         // Requête d'ajout sécurisée du prenom, nom, telephone et mail dans la table client 
-        $req_pre = $cnx->prepare("INSERT INTO contact (prenom, nom, telephone, mail)
+        $req_pre = $cnx->prepare("INSERT INTO contact (nom, prenom, telephone, mail)
         VALUES (:val1,:val2,:val3,:val4)"); 
                     
         // Affectation des valeurs de la requêtes
-        $req_pre->bindValue(':val1', $prenom, PDO::PARAM_STR);
-        $req_pre->bindValue(':val2', $nom, PDO::PARAM_STR);
+        $req_pre->bindValue(':val1', $nom, PDO::PARAM_STR);
+        $req_pre->bindValue(':val2', $prenom, PDO::PARAM_STR);
         $req_pre->bindValue(':val3', $telephone, PDO::PARAM_STR);
         $req_pre->bindValue(':val4', $email, PDO::PARAM_STR);
         $req_pre->execute();

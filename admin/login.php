@@ -8,6 +8,8 @@ if (isset ($_GET['action']))
 		$identifiant = $_POST['identifiant']; 
 		$mdp = $_POST['mdp'];
 
+
+
 		// Démarrage de la session et sauvegarde des informations dans 2 variables
 		session_start();
 			
@@ -44,7 +46,7 @@ if (isset ($_GET['action']))
 		} else {
 			?>
 				<h2>Erreur</h2>
-				<p>Mot de passe incorrect (attention au majuscule/minuscule).</p>
+				<p>Mot de passe ou identifiant incorrect (attention au majuscule/minuscule).</p>
 
 				<html>
 				<head>

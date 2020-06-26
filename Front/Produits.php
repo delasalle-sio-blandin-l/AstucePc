@@ -30,7 +30,8 @@
 	//Mettre if si parametre GET sinon Select * from produit
 	if(isset($_GET['filtre-produit'])) {
 		//Requête SQL permettant de selectionner toutes les produits stockée dans la base de données
-		$req_pre = $cnx->prepare("SELECT * FROM produit WHERE famillePdtLibelle = '".$_GET['filtre-produit']."'");
+		$req_pre = $cnx->prepare("SELECT * FROM produit WHERE famillePdtLibelle = :famillepdt ");
+		$req_pre->bindValue(':famillepdt', htmlspecialchars($_GET['filtre-produit']), PDO::PARAM_STR);
 	} else {
 		//Requête SQL permettant de selectionner toutes les produits stockée dans la base de données
 		$req_pre = $cnx->prepare("SELECT * FROM produit");
@@ -45,17 +46,17 @@
 	?>
 		<div class="wrapper">
             <div class="product-img">
-				<img alt="Produit mis en vente" src="../core/ressources/images/produits/<?php echo $ligne->pdtImage ?>.png" height="420" width="327">
+				<img alt="Produit mis en vente" src="../core/ressources/images/produits/<?php echo htmlspecialchars($ligne->pdtImage) ?>.png" height="420" width="327">
 			</div>
 			<div class="product-info">
 				<div class="product-text">
-					<h1><?php echo $ligne->pdtLibelle ?></h1>
-					<h2><?php echo $ligne->famillePdtLibelle ?></h2>
-					<p><?php echo $ligne->pdtDescription ?></p>
+					<h1><?php echo htmlspecialchars($ligne->pdtLibelle) ?></h1>
+					<h2><?php echo htmlspecialchars($ligne->famillePdtLibelle) ?></h2>
+					<p><?php echo htmlspecialchars($ligne->pdtDescription) ?></p>
 				</div>
 				<div class="product-price-btn">
-					<p>Prix : <span><?php echo $ligne->pdtPrix ?></span>€</p>
-					<button type="button">Ajouter au panier</button>
+					<p>Prix : <span><?php echo htmlspecialchars($ligne->pdtPrix) ?></span>€</p>
+					<a href="#"><button type="button">Ajouter au panier</button></a>
 				</div>
 			</div>
         </div>

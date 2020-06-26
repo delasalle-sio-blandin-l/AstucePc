@@ -10,19 +10,17 @@
   <!-- Formulaire de contact -->
   <div class="form-contact">
     <h1>CONTACTEZ NOUS</h1>
-    <form class="form-contact-contenu" METHOD="POST" ACTION="../back/enregContact.php">
+    <form class="form-contact-contenu" METHOD="POST" ACTION="../Back/enregContact.php">
         <label for="nom">Nom :<br></label><input id="nom" name="nom" type="text" pattern="^[a-zA-Z' \-]+$" class="input-nom" maxlength="25" size="25" placeholder="Entrez votre nom" required><br>
         <label for="prenom">Prénom :<br></label><input id="prenom" name="prenom" type="text" pattern="^[a-zA-Z' \-]+$" class="input-prenom" maxlength="25" size="25" placeholder="Entrez votre prénom" required /><br>
         <label for="telephone">Téléphone :<br></label><input id="telephone" name="telephone" type="tel" class="input-telephone" pattern="^([0-9]{2,2}(\.|-| )?){4,4}[0-9]{2,2}$" maxlength="50" size="25"  placeholder="Entrez votre numero de telephone" /><br>
-        <label for="email">Email :<br></label><input id="email" name="email" type="email" pattern="^.+@.+\.(fr|com|net)$" class="input-email" maxlength="50" size="25"  placeholder="Entrez votre mail" /><br>
-        <label for="sujet">Sujet :<br></label><input id="sujet" name="sujet" type="text" class="input-sujet" maxlength="25" size="25"  placeholder="Entrez votre sujet" /><br>
-        <label for="message">Message :<br></label><textarea id="message" name="message" class="input-textarea" cols=60 rows=10></textarea><br>
+        <label for="email">Email :<br></label><input id="email" name="email" type="email" pattern="^.+@.+\.(fr|com|net|org)$" class="input-email" maxlength="50" size="25"  placeholder="Entrez votre mail" /><br>
+        <label for="sujet">Sujet :<br></label><input id="sujet" name="sujet" type="text" class="input-sujet" maxlength="25" size="25"  placeholder="Entrez votre sujet" required/><br>
+        <label for="message">Message :<br></label><textarea id="message" name="message" class="input-textarea" cols=60 rows=10 required></textarea><br>
 
+        <?php include ("../core/ressources/captcha/index.php"); ?><br>
         <input type="submit" id="submit" class="contact-button" value="Envoyer">
-        <?php //include ("ressources/captcha/index.php"); ?>
 
-        
-        
         <p class="p-contact">
         En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de ma demande 
         et de la relation commerciale qui peut en découler. Pour connaître et exercer vos droits, notamment de retrait de 
